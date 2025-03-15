@@ -72,7 +72,7 @@ td {
 @media (width <=600px) {
   .table {
     margin: auto;
-    font-size: 0.8rem;
+    font-size: 0.6rem;
     margin-top: 1rem;
   }
  
@@ -87,6 +87,8 @@ td {
     color: brown;
     padding:1px;
     max-width: fit-content;
+    padding:2px;
+    margin-right: 4px;
   }
   .title {
     text-align: center;
@@ -98,5 +100,9 @@ td {
   .box li {
     list-style: none;
     font-size: 12px;
+  }
+  td {
+    border: 1px solid chocolate;
+    padding: 0.25rem;
   }
 }
