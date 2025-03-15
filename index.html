@@ -43,8 +43,6 @@
         const userht = htnologin.value;
         const userpass = passwordlogin.value;
         const studentObj = JSON.parse(localStorage.getItem("student"));
-        console.log(userht);
-        console.log(userpass);
         if (studentObj) {
           if (studentObj.htno === userht && studentObj.rpassword === userpass) {
             window.location = "home.html";
