@@ -55,7 +55,7 @@ body {
     list-style: none;
     border: 1px solid peru;
   
-    font-size: 8px;
+    font-size: 10px;
     border-radius: 4px;
     background-color: peru;
     box-shadow: 4px 4px 4px;
@@ -70,13 +70,14 @@ body {
     margin-right: auto;
     list-style: none;
     margin-top: 1rem;
-    font-size:10px;
+    font-size:15px;
   }
   .matter{
     font-size: 20px;
-    padding:3px;
+    padding:5px;
   }
   .about-title{
     font-size: 25px;
+    padding:3px;
   }  
 }
