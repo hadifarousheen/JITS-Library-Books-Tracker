@@ -87,6 +87,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const del = document.createElement("img");
     del.src = "icons8-delete-30.png";
+    
     tdata7.appendChild(del);
     del.addEventListener("click", (e) => {
       const rowId = e.target.getAttribute("data-id");
