@@ -1,0 +1,43 @@
+body {
+  background-image: url("./btc_texture_background_1.png");
+}
+.container-book {
+  border: 1px solid brown;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 2rem;
+  border-radius: 24px;
+  box-shadow: 4px 4px 4px brown;
+  color: saddlebrown;
+}
+.heading {
+  text-align: center;
+}
+.textbox {
+  border: 1px solid chocolate;
+  margin: 0.4rem;
+  padding: 0.3rem;
+  font-size: 1rem;
+  border-radius: 6px;
+}
+.btn {
+  padding: 0.4rem;
+  border-radius: 12px;
+  font-size: 1.3rem;
+  margin-top: 0.5rem;
+  font-weight: bold;
+  background-color: peru;
+  box-shadow: 4px 4px 4px;
+  color: brown;
+  border: 1px solid peru;
+  margin-left: 1rem;
+}
+.btn:hover {
+  background-color: chocolate;
+}
+.title {
+  font-size: 1.5rem;
+  font-weight: bold;
+}

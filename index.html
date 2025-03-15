@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JITS Library</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="login-page">
+      <h3 class="notlogin"></h3>
+      <div class="box">
+        <form class="forml">
+          <label class="ht"
+            >HT. Number
+            <br />
+            <input type="text" name="hallticket" class="htno" required />
+          </label>
+          <br />
+          <label class="pass">
+            Password
+            <br />
+            <input type="password" name="password" class="password" required />
+            <br />
+          </label>
+          <div class="buttons">
+            <button type="submit" class="btn loginsubmit">Login</button>
+            <button class="btn">
+              <a class="register-btn" href="register.html">Register</a>
+            </button>
+            <button type="reset" class="btn reset">Reset</button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <script>
+      const forml = document.querySelector(".forml");
+      const loginerror = document.querySelector(".notlogin");
+      forml.addEventListener("submit", (e) => {
+        e.preventDefault();
+        const htnologin = document.querySelector(".htno");
+        const passwordlogin = document.querySelector(".password");
+        const userht = htnologin.value;
+        const userpass = passwordlogin.value;
+        const studentObj = JSON.parse(localStorage.getItem("student"));
+        console.log(userht);
+        console.log(userpass);
+        if (studentObj) {
+          if (studentObj.htno === userht && studentObj.rpassword === userpass) {
+            window.location = "home.html";
+          } else {
+            loginerror.innerText =
+              "Hall Ticket Number or Password is incorrect.";
+          }
+        } else {
+          loginerror.innerText =
+            "No student data found. Please register first.";
+        }
+      });
+    </script>
+  </body>
+</html>

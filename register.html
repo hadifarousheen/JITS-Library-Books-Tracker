@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Register</title>
+    <link rel="stylesheet" href="register.css" />
+  </head>
+  <body>
+    <h2>Enter Your Details to Register</h2>
+    <div class="container">
+      <form class="form" action="./index.html">
+        <label for="name" class="item"
+          >Full Name<input type="text" class="name" id="name" required
+        /></label>
+
+        <label for="htr" class="item">
+          HallTicket Number<input
+            type="text"
+            class="hallticketregister"
+            id="htr"
+            required
+        /></label>
+
+        <label for="course" class="item"
+          >Course<br /><select id="course" class="course" required>
+            <option>Select Course</option>
+            <option>Btech</option>
+            <option>Mtech</option>
+            <option>MBA</option>
+            <option>Diploma</option>
+          </select></label
+        >
+
+        <label for="branch" class="item"
+          >Branch<br /><select class="branch" required>
+            <option>select Branch</option>
+            <option>CSE</option>
+            <option>CSM</option>
+            <option>ECE</option>
+            <option>EEE</option>
+            <option>MECH</option>
+            <option>CIVIL</option>
+          </select></label
+        >
+
+        <label for="year" class="item">
+          Current Year <input type="number" id="year" class="year" required />
+        </label>
+
+        <label for="semester" class="item"
+          >Current Semester<input
+            type="number"
+            id="semester"
+            class="semester"
+            required
+          />
+        </label>
+
+        <label for="email" class="item">
+          Email ID (of college)<input
+            type="email"
+            id="email"
+            class="email"
+            required
+          />
+        </label>
+
+        <label for="password" class="item"
+          >Password <br /><input
+            type="password"
+            class="rpassword"
+            id="password"
+            required
+        /></label>
+        <button type="submit" class="register-submit item">Submit</button>
+        <input class="reset-register" type="reset" value="Reset" />
+        <a class="btn-back" href="./index.html">Back</a>
+      </form>
+    </div>
+    <script src="./index.js"></script>
+  </body>
+</html>
