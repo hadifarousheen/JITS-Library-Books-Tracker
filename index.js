@@ -102,16 +102,16 @@ htno.addEventListener('input',(e)=>{
 
 form.addEventListener('submit',(e)=>{
     e.preventDefault();
-    if(isregistered===true){
-    const message=document.createElement('h3');
-    message.innerText="You have already registered on this device.Try to Login instead..";
-    message.style.color="brown";
-    const container=document.querySelector('.container');
-    container.appendChild(message);
-    }
-    else{
+    // if(isregistered===true){
+    // const message=document.createElement('h3');
+    // message.innerText="You have already registered on this device.Try to Login instead..";
+    // message.style.color="brown";
+    // const container=document.querySelector('.container');
+    // container.appendChild(message);
+    // }
+    // else{
     window.location="index.html";
-    }
+   // }
 }
 )
 
