@@ -27,7 +27,7 @@ sname.addEventListener('input',(e)=>{
    studentobj.sname=snameuser;
    localStorage.setItem('student',JSON.stringify(studentobj));
   
-})
+});
 
 htno.addEventListener('input',(e)=>{
 
@@ -36,7 +36,7 @@ htno.addEventListener('input',(e)=>{
     studentobj.htno=htuser;
     localStorage.setItem('student',JSON.stringify(studentobj));
    
- })
+ });
   
  course.addEventListener('input',(e)=>{
 
@@ -45,7 +45,7 @@ htno.addEventListener('input',(e)=>{
     studentobj.course=courseuser;
     localStorage.setItem('student',JSON.stringify(studentobj));
    
- })
+ });
 
  branch.addEventListener('input',(e)=>{
   
@@ -54,7 +54,7 @@ htno.addEventListener('input',(e)=>{
     studentobj.branch=branchuser;
     localStorage.setItem('student',JSON.stringify(studentobj));
    
- })
+ });
 
 
  year.addEventListener('input',(e)=>{
@@ -64,7 +64,7 @@ htno.addEventListener('input',(e)=>{
     studentobj.year=yearuser;
     localStorage.setItem('student',JSON.stringify(studentobj));
    
- })
+ });
 
 
  semester.addEventListener('input',(e)=>{
@@ -74,7 +74,7 @@ htno.addEventListener('input',(e)=>{
     studentobj.semester=semesteruser;
     localStorage.setItem('student',JSON.stringify(studentobj));
    
- })
+ });
 
 
  email.addEventListener('input',(e)=>{
@@ -84,7 +84,7 @@ htno.addEventListener('input',(e)=>{
     studentobj.email=emailuser;
     localStorage.setItem('student',JSON.stringify(studentobj));
    
- })
+ });
 
  rpasswords.addEventListener('input',(e)=>{
   
@@ -94,7 +94,7 @@ htno.addEventListener('input',(e)=>{
     localStorage.setItem('student',JSON.stringify(studentobj));
     localStorage.setItem('fine',0);
    
- })
+ });
 
 
 form.addEventListener('submit',(e)=>{
