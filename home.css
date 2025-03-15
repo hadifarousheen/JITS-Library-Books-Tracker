@@ -86,17 +86,17 @@ td {
     box-shadow: 4px 4px 4px;
     color: brown;
     padding:1px;
-    width:fit-content;
+    max-width: fit-content;
   }
   .title {
     text-align: center;
     margin-right: auto;
     list-style: none;
     margin-top: 1rem;
-    font-size:18px;
+    font-size:10px;
   }
   .box li {
     list-style: none;
-    font-size: 1rem;
+    font-size: 12px;
   }
 }
