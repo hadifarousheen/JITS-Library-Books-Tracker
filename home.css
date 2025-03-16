@@ -41,6 +41,7 @@ body {
   padding: 1rem;
   border-radius: 8px;
   box-shadow: 4px 4px 4px chocolate;
+  margin-top: 100px;
 }
 
 .box li {
@@ -67,6 +68,10 @@ td {
 }
 .nav {
   background-color: burlywood;
+  position: fixed;
+  width: 100%;
+  top:0;
+ 
 }
 
 @media (width <=600px) {
@@ -107,5 +112,15 @@ td {
   }
   .icon-img{
     width:10px;
+  }
+  
+  .box {
+    border: 1px solid chocolate;
+    margin: auto;
+    width: fit-content;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 4px 4px 4px chocolate;
+    margin-top:50px;
   }
 }
