@@ -73,6 +73,11 @@ td {
   top:0;
  
 }
+.edit-change{
+  background-color: transparent;
+  border: none;
+  outline: none;
+}
 
 @media (width <=600px) {
   .table {
