@@ -87,7 +87,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const del = document.createElement("img");
     del.src = "icons8-delete-30.png";
-    
+    del.classList.add('icon-img');
     tdata7.appendChild(del);
     del.addEventListener("click", (e) => {
       const rowId = e.target.getAttribute("data-id");
@@ -104,6 +104,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const edit = document.createElement("img");
     edit.src = "icons8-edit-30.png";
     edit.style.marginLeft = "10px";
+    edit.classList.add('icon-img');
     tdata7.appendChild(edit);
     edit.addEventListener("click", () => {});
     row.appendChild(tdata7);

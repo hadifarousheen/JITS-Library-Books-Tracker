@@ -55,7 +55,7 @@ body {
     list-style: none;
     border: 1px solid peru;
   
-    font-size: 10px;
+    font-size: 8px;
     border-radius: 4px;
     background-color: peru;
     box-shadow: 4px 4px 4px;
@@ -70,7 +70,7 @@ body {
     margin-right: auto;
     list-style: none;
     margin-top: 1rem;
-    font-size:15px;
+    font-size:12px;
   }
   .matter{
     font-size: 20px;

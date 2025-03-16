@@ -95,7 +95,7 @@ td {
     margin-right: auto;
     list-style: none;
     margin-top: 1rem;
-    font-size:10px;
+    font-size:12px;
   }
   .box li {
     list-style: none;
@@ -104,5 +104,8 @@ td {
   td {
     border: 1px solid chocolate;
     padding: 0.25rem;
+  }
+  .icon-img{
+    width:10px;
   }
 }
