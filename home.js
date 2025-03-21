@@ -46,10 +46,6 @@ document.addEventListener("DOMContentLoaded", () => {
   semester.innerText = `Semester : ${studentobj.semester}`;
   box.appendChild(semester);
 
-  const fine = document.createElement("li");
-  fine.innerText = `Fine : ${fineamount}`;
-  box.appendChild(fine);
-
   const table = document.querySelector(".table");
 
   const books = JSON.parse(localStorage.getItem("books"));
@@ -57,10 +53,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
   for (let i = 0; i < no; i++) {
     const row = document.createElement("tr");
-    row.setAttribute("data-id", books.serialno);
+    row.setAttribute("data-id", i);
 
     const tdata = document.createElement("td");
-    tdata.innerText = books[i].serialno;
+    tdata.innerText = i+1;
     row.appendChild(tdata);
 
     const tdata2 = document.createElement("td");
@@ -87,7 +83,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const del = document.createElement("img");
     del.src = "icons8-delete-30.png";
-    del.classList.add('icon-img');
+    del.classList.add("icon-img");
     tdata7.appendChild(del);
     del.addEventListener("click", (e) => {
       const rowId = e.target.getAttribute("data-id");
@@ -102,13 +98,55 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     const edit = document.createElement("img");
+    edit.setAttribute("data-id", i);
     edit.src = "icons8-edit-30.png";
     edit.style.marginLeft = "10px";
-    edit.classList.add('icon-img');
+    edit.classList.add("icon-img");
     tdata7.appendChild(edit);
-    edit.addEventListener("click", () => {
-      
+    edit.addEventListener("click", (e) => {
+      let studentid = e.target.getAttribute("data-id");
+      let booksdata = JSON.parse(localStorage.getItem("books"));
+
+ 
+      tdata2.addEventListener("dblclick", function () {
+        const input = document.createElement("input");
+        input.type = "text";
+        input.value = this.innerText;
+
+        this.replaceWith(input);
+
+        input.addEventListener("blur", function () {
+          const td = document.createElement("td");
+          td.innerText = input.value;
+          input.replaceWith(td);
+
+          booksdata[studentid].bname = input.value;
+          localStorage.setItem("books", JSON.stringify(booksdata));
+        });
+
+        input.focus();
+      });
+
+      tdata3.addEventListener("dblclick", function () {
+        const input = document.createElement("input");
+        input.type = "text";
+        input.value = this.innerText;
+        this.replaceWith(input);
+
+        input.addEventListener("blur", function () {
+          const td = document.createElement("td");
+          td.innerText = input.value;
+          input.replaceWith(td);
+          booksdata[studentid].bauthor = input.value;
+          localStorage.setItem("books", JSON.stringify(booksdata));
+        });
+
+        input.focus();
+      });
+
+      input.focus();
     });
+
     row.appendChild(tdata7);
     table.appendChild(row);
   }

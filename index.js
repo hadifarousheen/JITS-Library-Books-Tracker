@@ -1,7 +1,8 @@
 const submit=document.querySelector('.register-submit');
-let isregistered=false;
+let firstregistered;
 if (!localStorage.getItem('student')) {
     let student = {};
+    firstregistered=false;
     localStorage.setItem('student', JSON.stringify(student));
   
 }
@@ -24,8 +25,16 @@ sname.addEventListener('input',(e)=>{
 
    const snameuser=e.target.value;
    const studentobj=JSON.parse(localStorage.getItem('student'));
-   studentobj.sname=snameuser;
-   localStorage.setItem('student',JSON.stringify(studentobj));
+   if(studentobj.sname== null){
+      studentobj.sname=snameuser;
+      localStorage.setItem('student',JSON.stringify(studentobj));
+      firstregistered=true;
+   }
+   else{
+   firstregistered=false;
+   }
+
+  
   
 });
 
@@ -33,8 +42,11 @@ htno.addEventListener('input',(e)=>{
 
     const htuser=e.target.value;
     const studentobj=JSON.parse(localStorage.getItem('student'));
+    if(studentobj.htno==null){
     studentobj.htno=htuser;
     localStorage.setItem('student',JSON.stringify(studentobj));
+    }
+   
    
  });
   
@@ -42,8 +54,11 @@ htno.addEventListener('input',(e)=>{
 
     const courseuser=e.target.value;
     const studentobj=JSON.parse(localStorage.getItem('student'));
+    if(studentobj.course==null){
     studentobj.course=courseuser;
     localStorage.setItem('student',JSON.stringify(studentobj));
+    }
+    
    
  });
 
@@ -51,8 +66,11 @@ htno.addEventListener('input',(e)=>{
   
     const branchuser=e.target.value;
     const studentobj=JSON.parse(localStorage.getItem('student'));
+    if(studentobj.branch==null){
     studentobj.branch=branchuser;
     localStorage.setItem('student',JSON.stringify(studentobj));
+    }
+   
    
  });
 
@@ -61,8 +79,12 @@ htno.addEventListener('input',(e)=>{
 
     const yearuser=e.target.value;
     const studentobj=JSON.parse(localStorage.getItem('student'));
+    if(studentobj.year==null)
+    {
     studentobj.year=yearuser;
     localStorage.setItem('student',JSON.stringify(studentobj));
+    }
+  
    
  });
 
@@ -71,8 +93,11 @@ htno.addEventListener('input',(e)=>{
 
     const semesteruser=e.target.value;
     const studentobj=JSON.parse(localStorage.getItem('student'));
+    if(studentobj.semester==null){
     studentobj.semester=semesteruser;
     localStorage.setItem('student',JSON.stringify(studentobj));
+    }
+    
    
  });
 
@@ -81,8 +106,11 @@ htno.addEventListener('input',(e)=>{
 
     const emailuser=e.target.value;
     const studentobj=JSON.parse(localStorage.getItem('student'));
+    if(studentobj.email==null){
     studentobj.email=emailuser;
     localStorage.setItem('student',JSON.stringify(studentobj));
+    }
+   
    
  });
 
@@ -90,25 +118,29 @@ htno.addEventListener('input',(e)=>{
   
     const rpassworduser=e.target.value;
     const studentobj=JSON.parse(localStorage.getItem('student'));
+    if(studentobj.rpassword==null){
     studentobj.rpassword=rpassworduser;
     localStorage.setItem('student',JSON.stringify(studentobj));
-    localStorage.setItem('fine',0);
+    }
+   
+  
    
  });
 
 
 form.addEventListener('submit',(e)=>{
     e.preventDefault();
-    // if(isregistered===true){
-    // const message=document.createElement('h3');
-    // message.innerText="You have already registered on this device.Try to Login instead..";
-    // message.style.color="brown";
-    // const container=document.querySelector('.container');
-    // container.appendChild(message);
-    // }
-    // else{
+    const studentobj=JSON.parse(localStorage.getItem('student'));
+    if(studentobj.sname && firstregistered==false){
+    const message=document.createElement('h3');
+    message.innerText="You have already registered on this device.Try to Login instead..";
+    message.style.color="brown";
+    const container=document.querySelector('.container');
+    container.appendChild(message);
+    }
+    else{
     window.location="index.html";
-   // }
+   }
 }
 )
 

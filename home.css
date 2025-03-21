@@ -73,6 +73,13 @@ td {
   top:0;
  
 }
+.edit-change{
+  background-color: transparent;
+  padding: 0.3rem;
+  border: 1px solid chocolate;
+  font-size: 1.8rem;
+  max-width: max-content;
+}
 
 
 @media (width <=600px) {
