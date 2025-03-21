@@ -73,11 +73,7 @@ td {
   top:0;
  
 }
-.edit-change{
-  background-color: transparent;
-  border: none;
-  outline: none;
-}
+
 
 @media (width <=600px) {
   .table {
@@ -126,6 +122,14 @@ td {
     padding: 1rem;
     border-radius: 8px;
     box-shadow: 4px 4px 4px chocolate;
-    margin-top:100px;
+    margin-top:80px;
+  }
+  .edit-change{
+    background-color: transparent;
+    border: 1px solid chocolate;
+    padding: 0.5rem;
+    font-size:0.5rem;
+    
+  
   }
 }

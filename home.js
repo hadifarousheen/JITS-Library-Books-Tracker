@@ -107,12 +107,7 @@ document.addEventListener("DOMContentLoaded", () => {
     edit.classList.add('icon-img');
     tdata7.appendChild(edit);
     edit.addEventListener("click", () => {
-      tdata2.addEventListener("dblclick",()=>{
-        let input = document.createElement("input");
-        input.value = this.innerText;
-        input.classList.add('edit-change');
-        this.replaceWith(input);
-      })
+      
     });
     row.appendChild(tdata7);
     table.appendChild(row);
