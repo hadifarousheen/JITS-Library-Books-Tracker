@@ -1,1 +1,2 @@
 # JITS-Library-Books-Tracker
+# I have created this project JITS Library Book Tracker to solve the problem faced by the students who take books from library but forgets to return it back on time.Due to which they have to pay fine.To save your money I created this project.You can keep track of the books which you take from library including the book name,book author,Date of issue,Date of return and Date of renewal.So basically the idea of this project is to send you a notification to remind you to return the book to the librarian.
