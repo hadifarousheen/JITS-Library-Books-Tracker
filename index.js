@@ -21,7 +21,7 @@ const registersubmit=document.querySelector('.register-submit');
 const form=document.querySelector('.form');
 
 
-sname.addEventListener('input',(e)=>{
+sname.addEventListener('input',function(e){
 
    const snameuser=e.target.value;
    const studentobj=JSON.parse(localStorage.getItem('student'));
@@ -38,7 +38,7 @@ sname.addEventListener('input',(e)=>{
   
 });
 
-htno.addEventListener('input',(e)=>{
+htno.addEventListener('input',function(e){
 
     const htuser=e.target.value;
     const studentobj=JSON.parse(localStorage.getItem('student'));
@@ -50,7 +50,7 @@ htno.addEventListener('input',(e)=>{
    
  });
   
- course.addEventListener('input',(e)=>{
+ course.addEventListener('input',function(e){
 
     const courseuser=e.target.value;
     const studentobj=JSON.parse(localStorage.getItem('student'));
@@ -62,7 +62,7 @@ htno.addEventListener('input',(e)=>{
    
  });
 
- branch.addEventListener('input',(e)=>{
+ branch.addEventListener('input',function(e){
   
     const branchuser=e.target.value;
     const studentobj=JSON.parse(localStorage.getItem('student'));
@@ -75,7 +75,7 @@ htno.addEventListener('input',(e)=>{
  });
 
 
- year.addEventListener('input',(e)=>{
+ year.addEventListener('input',function(e){
 
     const yearuser=e.target.value;
     const studentobj=JSON.parse(localStorage.getItem('student'));
@@ -89,7 +89,7 @@ htno.addEventListener('input',(e)=>{
  });
 
 
- semester.addEventListener('input',(e)=>{
+ semester.addEventListener('input',function(e){
 
     const semesteruser=e.target.value;
     const studentobj=JSON.parse(localStorage.getItem('student'));
@@ -102,7 +102,7 @@ htno.addEventListener('input',(e)=>{
  });
 
 
- email.addEventListener('input',(e)=>{
+ email.addEventListener('input',function(e){
 
     const emailuser=e.target.value;
     const studentobj=JSON.parse(localStorage.getItem('student'));
@@ -114,7 +114,7 @@ htno.addEventListener('input',(e)=>{
    
  });
 
- rpasswords.addEventListener('input',(e)=>{
+ rpasswords.addEventListener('input',function(e){
   
     const rpassworduser=e.target.value;
     const studentobj=JSON.parse(localStorage.getItem('student'));
