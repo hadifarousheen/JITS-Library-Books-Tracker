@@ -118,7 +118,7 @@ htno.addEventListener('input',function(e){
   
     const rpassworduser=e.target.value;
     const studentobj=JSON.parse(localStorage.getItem('student'));
-    if(studentobj.rpassword==null){
+    if(!studentobj.rpassword){
     studentobj.rpassword=rpassworduser;
     localStorage.setItem('student',JSON.stringify(studentobj));
     }
