@@ -26,7 +26,7 @@
           <div class="buttons">
             <button type="submit" class="btn loginsubmit">Login</button>
             <button class="btn">
-              <a class="register-btn" href="../Register/register.html"
+              <a class="register-btn" href="./Register/register.html"
                 >Register</a
               >
             </button>
@@ -47,7 +47,7 @@
         const studentObj = JSON.parse(localStorage.getItem("student"));
         if (studentObj) {
           if (studentObj.htno === userht && studentObj.rpassword === userpass) {
-            window.location = "../Home/home.html";
+            window.location = "./Home/home.html";
           } else {
             loginerror.innerText =
               "Hall Ticket Number or Password is incorrect.";
