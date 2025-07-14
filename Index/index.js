@@ -74,6 +74,6 @@ function handleSubmit(e) {
     const container = document.querySelector(".container");
     container.appendChild(message);
   } else {
-    window.location = "../Index/index.html";
+    window.location = "../index.html";
   }
 }
