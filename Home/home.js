@@ -7,7 +7,7 @@ newbook.addEventListener("click", () => {
 });
 
 logout.addEventListener("click", () => {
-  window.location = "../Index/index.html";
+  window.location = "../index.html";
 });
 
 about.addEventListener("click", () => {
