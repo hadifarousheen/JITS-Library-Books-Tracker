@@ -9,7 +9,7 @@
   <body>
     <h2>Enter Your Details to Register</h2>
     <div class="container">
-      <form class="form" action="./index.html">
+      <form class="form" onsubmit="handleSubmit(event)"  >
         <label for="name" class="item"
           >Full Name<input type="text" class="name" id="name" required value=""
         /></label>
@@ -19,22 +19,22 @@
             type="text"
             class="hallticketregister"
             id="htr"
-            required value=""
+            required
+            value=""
+            minlength="10" maxlength="10"
         /></label>
-
         <label for="course" class="item"
-          >Course<br /><select id="course" class="course" required value="" >
-            <option value="">Select Course</option>
-            <option >Btech</option>
-            <option >Mtech</option>
-            <option >MBA</option>
-            <option >Diploma</option>
+          >Course<br /><select id="course" class="course" required value="">
+            <option value="" hidden>Select Course</option>
+            <option>Btech</option>
+            <option>Mtech</option>
+            <option>MBA</option>
+            <option>Diploma</option>
           </select></label
         >
-
         <label for="branch" class="item"
           >Branch<br /><select id="branch" value="" class="branch" required>
-            <option>select Branch</option>
+            <option hidden>Select Branch</option>
             <option>CSE</option>
             <option>CSM</option>
             <option>ECE</option>
@@ -43,11 +43,10 @@
             <option>CIVIL</option>
           </select></label
         >
-
         <label for="year" class="item">
-          Current Year <input type="number" id="year" class="year" required value=""/>
+          Current Year
+          <input type="number" id="year" class="year" required value="" min="1" max="4" />
         </label>
-
         <label for="semester" class="item"
           >Current Semester<input
             type="number"
@@ -55,9 +54,9 @@
             class="semester"
             required
             value=""
+            min="1" max="8"
           />
         </label>
-
         <label for="email" class="item">
           Email ID (of college)<input
             type="email"
@@ -67,7 +66,6 @@
             value=""
           />
         </label>
-
         <label for="password" class="item"
           >Password <br /><input
             type="password"
@@ -75,12 +73,13 @@
             id="password"
             required
             value=""
+            minlength="8"
         /></label>
         <button type="submit" class="register-submit item">Submit</button>
         <input class="reset-register" type="reset" value="Reset" />
-        <a class="btn-back" href="./index.html">Back</a>
+        <a class="btn-back" href="../Index/index.html">Back</a>
       </form>
     </div>
-    <script src="./index.js"></script>
+    <script src="../Index/index.js"></script>
   </body>
 </html>

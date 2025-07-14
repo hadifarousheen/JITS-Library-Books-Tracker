@@ -1,7 +1,7 @@
 body {
   padding: 0;
   margin: 0;
-  background-image: url("./download.jpg");
+  background-image: url("../Images/books.jpg");
   color: brown;
 }
 .box {
@@ -55,11 +55,11 @@ body {
   position: relative;
   top: 140px;
   color: red;
+  background-color: white;
 }
 
 @media (width >=600px) {
   .box {
-    border: 1px solid black;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -67,46 +67,19 @@ body {
     font-size: 3rem;
     padding: 1.5rem;
     margin-top: auto;
-    border-radius: 12px;
   }
   .btn {
-    border: 1px solid;
     border-radius: 14px;
-    padding: 0.4rem;
     font-size: 2rem;
-    font-weight: bold;
-    margin-top: 1.5rem;
-    background-color: peru;
-    box-shadow: 4px 4px 4px;
-    color: brown;
-  }
-  .register-btn {
-    text-decoration: none;
-    color: brown;
   }
   .htno {
-    width: 90%;
-    border: 1px solid;
-    font-size: 1.5rem;
     height: 25px;
   }
   .password {
-    width: 90%;
-    border: 1px solid;
-    font-size: 1.5rem;
     height: 25px;
   }
   .notlogin {
-    text-align: center;
-    width: fit-content;
-    margin: auto;
     margin-top: 50px;
-    position: relative;
     top: 20px;
-    color: red;
-    background-color: white;
-  }
-  .btn:hover {
-    background-color: burlywood;
   }
 }

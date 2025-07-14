@@ -19,10 +19,8 @@ const login = document.querySelector(".loginsubmit");
 const registersubmit = document.querySelector(".register-submit");
 const form = document.querySelector(".form");
 
-form.addEventListener("submit", (e) => {
+function handleSubmit(e) {
   e.preventDefault();
-
-
   const studentobj = JSON.parse(localStorage.getItem("student"));
 
   if (studentobj.sname == null) {
@@ -63,8 +61,8 @@ form.addEventListener("submit", (e) => {
     localStorage.setItem("student", JSON.stringify(studentobj));
   }
 
-  if (studentobj.rpassword==null) {
-    studentobj.rpassword = e.target.password.value ;
+  if (studentobj.rpassword == null) {
+    studentobj.rpassword = e.target.password.value;
     localStorage.setItem("student", JSON.stringify(studentobj));
   }
 
@@ -76,6 +74,6 @@ form.addEventListener("submit", (e) => {
     const container = document.querySelector(".container");
     container.appendChild(message);
   } else {
-    window.location = "index.html";
+    window.location = "../Index/index.html";
   }
-});
+}

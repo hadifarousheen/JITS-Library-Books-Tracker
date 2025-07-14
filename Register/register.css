@@ -1,5 +1,5 @@
 body {
-  background-image: url("./btc_texture_background_1.png");
+  background-image: url("../Images//background.png");
   color: brown;
 }
 .container {
@@ -43,7 +43,6 @@ body {
   font-size: 1.2rem;
   border-radius: 6px;
 }
-
 .year {
   width: 80%;
   margin: 1rem;
@@ -80,7 +79,6 @@ body {
   margin-top: 1rem;
   display: inline;
   margin: 5px;
-
   background-color: peru;
   box-shadow: 4px 4px 4px;
   color: brown;

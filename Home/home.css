@@ -71,7 +71,6 @@ td {
   position: fixed;
   width: 100%;
   top:0;
- 
 }
 .edit-change{
   background-color: transparent;
@@ -81,62 +80,35 @@ td {
   max-width: max-content;
 }
 
-
 @media (width <=600px) {
   .table {
-    margin: auto;
     font-size: 0.6rem;
-    margin-top: 1rem;
   }
- 
   .item {
-    list-style: none;
-    border: 1px solid peru;
-  
     font-size: 8px;
     border-radius: 4px;
-    background-color: peru;
-    box-shadow: 4px 4px 4px;
-    color: brown;
     padding:1px;
     max-width: fit-content;
     padding:2px;
     margin-right: 4px;
   }
   .title {
-    text-align: center;
-    margin-right: auto;
-    list-style: none;
-    margin-top: 1rem;
     font-size:12px;
   }
   .box li {
-    list-style: none;
     font-size: 12px;
   }
   td {
-    border: 1px solid chocolate;
     padding: 0.25rem;
   }
   .icon-img{
     width:10px;
   }
-  
   .box {
-    border: 1px solid chocolate;
-    margin: auto;
-    width: fit-content;
-    padding: 1rem;
-    border-radius: 8px;
-    box-shadow: 4px 4px 4px chocolate;
     margin-top:80px;
   }
   .edit-change{
-    background-color: transparent;
-    border: 1px solid chocolate;
     padding: 0.5rem;
     font-size:0.5rem;
-    
-  
   }
 }

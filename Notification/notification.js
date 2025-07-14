@@ -5,7 +5,7 @@ function showNotification() {
   datastored.map((item) => {
     if (item.return == todaysdate || item.renewal == todaysdate) {
       new Notification("Library Reminder", {
-        body: "Do Visit Library to do renewal or return of the book.",
+        body: "Do Visit Library to do Renewal or Return of the Book.",
         icon: "https://via.placeholder.com/128",
       });
     }

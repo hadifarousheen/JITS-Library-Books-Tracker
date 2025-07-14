@@ -1,26 +1,23 @@
 const newbook = document.querySelector(".newbook");
-
 const logout = document.querySelector(".logout");
-
 const about = document.querySelector(".about");
 
 newbook.addEventListener("click", () => {
-  window.location = "newbook.html";
+  window.location = "../Book/newbook.html";
 });
 
 logout.addEventListener("click", () => {
-  window.location = "index.html";
+  window.location = "../Index/index.html";
 });
 
 about.addEventListener("click", () => {
-  window.location = "about.html";
+  window.location = "../About/about.html";
 });
 
 document.addEventListener("DOMContentLoaded", () => {
   const box = document.querySelector(".box");
 
   const studentobj = JSON.parse(localStorage.getItem("student"));
-  const fineamount = localStorage.getItem("fine");
 
   const sname = document.createElement("li");
   sname.innerText = `Student Name : ${studentobj.sname}`;
@@ -47,51 +44,51 @@ document.addEventListener("DOMContentLoaded", () => {
   box.appendChild(semester);
 
   const table = document.querySelector(".table");
-
   const books = JSON.parse(localStorage.getItem("books"));
-  const no = books.length;
+  const NumberofBooks = books.length;
 
-  for (let i = 0; i < no; i++) {
+  for (let i = 0; i < NumberofBooks; i++) {
     const row = document.createElement("tr");
     row.setAttribute("data-id", i);
 
-    const tdata = document.createElement("td");
-    tdata.innerText = i+1;
-    row.appendChild(tdata);
+    const SerialNo = document.createElement("td");
+    SerialNo.innerText = i + 1;
+    row.appendChild(SerialNo);
 
-    const tdata2 = document.createElement("td");
-    tdata2.innerText = books[i].bname;
-    row.appendChild(tdata2);
+    const BookName = document.createElement("td");
+    BookName.innerText = books[i].bname;
+    row.appendChild(BookName);
 
-    const tdata3 = document.createElement("td");
-    tdata3.innerText = books[i].bauthor;
-    row.appendChild(tdata3);
+    const BookAuthor = document.createElement("td");
+    BookAuthor.innerText = books[i].bauthor;
+    row.appendChild(BookAuthor);
 
-    const tdata4 = document.createElement("td");
-    tdata4.innerText = books[i].issuedate;
-    row.appendChild(tdata4);
+    const IssueDate = document.createElement("td");
+    IssueDate.innerText = books[i].issuedate;
+    row.appendChild(IssueDate);
 
-    const tdata5 = document.createElement("td");
-    tdata5.innerText = books[i].renewal;
-    row.appendChild(tdata5);
+    const RenewalDate = document.createElement("td");
+    RenewalDate.innerText = books[i].renewal;
+    row.appendChild(RenewalDate);
 
-    const tdata6 = document.createElement("td");
-    tdata6.innerText = books[i].return;
-    row.appendChild(tdata6);
+    const ReturnDate = document.createElement("td");
+    ReturnDate.innerText = books[i].return;
+    row.appendChild(ReturnDate);
 
-    const tdata7 = document.createElement("td");
+    const IconBlock = document.createElement("td");
 
     const del = document.createElement("img");
-    del.src = "icons8-delete-30.png";
+    del.src = "../Images/delete-icon.png";
     del.classList.add("icon-img");
-    tdata7.appendChild(del);
+    IconBlock.appendChild(del);
+
     del.addEventListener("click", (e) => {
       const rowId = e.target.getAttribute("data-id");
       let data = JSON.parse(localStorage.getItem("books"));
       if (Array.isArray(data)) {
-        data.splice(rowId, 1); // Remove item at index rowId (for arrays)
+        data.splice(rowId, 1);
       } else {
-        delete data[rowId]; // Remove key from object
+        delete data[rowId];
       }
       localStorage.setItem("books", JSON.stringify(data));
       e.target.closest("tr").remove();
@@ -99,40 +96,33 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const edit = document.createElement("img");
     edit.setAttribute("data-id", i);
-    edit.src = "icons8-edit-30.png";
+    edit.src = "../Images/edit-icon.png";
     edit.style.marginLeft = "10px";
     edit.classList.add("icon-img");
-    tdata7.appendChild(edit);
+    IconBlock.appendChild(edit);
+
     edit.addEventListener("click", (e) => {
       let studentid = e.target.getAttribute("data-id");
       let booksdata = JSON.parse(localStorage.getItem("books"));
-
- 
-      tdata2.addEventListener("dblclick", function () {
+      BookName.addEventListener("dblclick", function () {
         const input = document.createElement("input");
         input.type = "text";
         input.value = this.innerText;
-
         this.replaceWith(input);
-
         input.addEventListener("blur", function () {
           const td = document.createElement("td");
           td.innerText = input.value;
           input.replaceWith(td);
-
           booksdata[studentid].bname = input.value;
           localStorage.setItem("books", JSON.stringify(booksdata));
         });
-
         input.focus();
       });
-
-      tdata3.addEventListener("dblclick", function () {
+      BookAuthor.addEventListener("dblclick", function () {
         const input = document.createElement("input");
         input.type = "text";
         input.value = this.innerText;
         this.replaceWith(input);
-
         input.addEventListener("blur", function () {
           const td = document.createElement("td");
           td.innerText = input.value;
@@ -140,14 +130,11 @@ document.addEventListener("DOMContentLoaded", () => {
           booksdata[studentid].bauthor = input.value;
           localStorage.setItem("books", JSON.stringify(booksdata));
         });
-
         input.focus();
       });
-
       input.focus();
     });
-
-    row.appendChild(tdata7);
+    row.appendChild(IconBlock);
     table.appendChild(row);
   }
 });

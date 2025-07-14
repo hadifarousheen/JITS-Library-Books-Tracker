@@ -6,15 +6,15 @@ const logout = document.querySelector(".logout");
 const about = document.querySelector(".about");
 
 home.addEventListener("click", () => {
-  window.location = "./home.html";
+  window.location = "../Home/home.html";
 });
 
 logout.addEventListener("click", () => {
-  window.location = "./index.html";
+  window.location = "../Index/index.html";
 });
 
 about.addEventListener("click", () => {
-  window.location = "./about.html";
+  window.location = "../About/about.html";
 });
 
 if (!localStorage.getItem("books")) {
@@ -34,33 +34,29 @@ bauthor.addEventListener("input", (e) => {
   bookobj[count].bauthor = e.target.value;
   localStorage.setItem("books", JSON.stringify(bookobj));
 });
+
 form.addEventListener("submit", (e) => {
   e.preventDefault();
-
   const bookobj = JSON.parse(localStorage.getItem("books"));
   bookobj[count].serialno = count + 1;
   bookobj[count].issuedate = `${new Date().getDate()}/${
     new Date().getMonth() + 1
   }/${new Date().getFullYear()}`;
   const currentDate = new Date();
-
   const futureDate = new Date(currentDate.setDate(currentDate.getDate() + 15));
-
   const formattedDate = `${futureDate.getDate()}/${
     futureDate.getMonth() + 1
   }/${futureDate.getFullYear()}`;
   bookobj[count].renewal = formattedDate;
   const currentDate2 = new Date();
-
   const futureDate2 = new Date(
     currentDate2.setDate(currentDate2.getDate() + 30)
   );
-
   const formattedDate2 = `${futureDate2.getDate()}/${
     futureDate2.getMonth() + 1
   }/${futureDate2.getFullYear()}`;
   bookobj[count].return = formattedDate2;
   localStorage.setItem("books", JSON.stringify(bookobj));
   count++;
-  window.location = "home.html";
+  window.location = "../Home/home.html";
 });

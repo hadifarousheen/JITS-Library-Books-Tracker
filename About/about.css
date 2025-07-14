@@ -47,37 +47,24 @@ body {
   color: #a52a2ad5;
 }
 
-
 @media (width <=600px) {
-
- 
   .item {
-    list-style: none;
-    border: 1px solid peru;
-  
     font-size: 8px;
     border-radius: 4px;
-    background-color: peru;
-    box-shadow: 4px 4px 4px;
-    color: brown;
-    padding:1px;
+    padding: 1px;
     max-width: fit-content;
-    padding:2px;
+    padding: 2px;
     margin-right: 4px;
   }
   .title {
-    text-align: center;
-    margin-right: auto;
-    list-style: none;
-    margin-top: 1rem;
-    font-size:12px;
+    font-size: 12px;
   }
-  .matter{
+  .matter {
     font-size: 20px;
-    padding:5px;
+    padding: 5px;
   }
-  .about-title{
+  .about-title {
     font-size: 25px;
-    padding:3px;
-  }  
+    padding: 3px;
+  }
 }
